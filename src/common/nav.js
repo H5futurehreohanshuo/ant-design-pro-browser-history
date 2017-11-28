@@ -21,7 +21,7 @@ export const getNavData = app => [
         component: dynamicWrapper(app, ['rule'], () => import('../routes/List/TableList')),
       },
       {
-        name: '测试页面',
+        name: '测试的页面',
         path: 'test-page',
         component: dynamicWrapper(app, [], () => import('../routes/Test/Page1')),
       },
