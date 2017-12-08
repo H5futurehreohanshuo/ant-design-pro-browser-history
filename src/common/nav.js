@@ -25,6 +25,47 @@ export const getNavData = app => [
         path: 'test-page',
         component: dynamicWrapper(app, [], () => import('../routes/Test/Page1')),
       },
+      {
+        name: '网签',
+        path: 'Net',
+        children:[
+           {
+               name: '我的网签',
+               path: 'MyNet',
+               component: dynamicWrapper(app, [], () => import('../routes/Net/MyNet')),
+           },
+           {
+               name: '发起签约',
+               path: 'SignContract',
+               component: dynamicWrapper(app,[], () => import('../routes/Net/MyNet/SignContract')),
+           },
+           {
+               name: '协议签署',
+               path: 'SignEsign',
+               component: dynamicWrapper(app,[], () => import('../routes/Net/MyNet/SignEsign')),
+           },
+           {
+               name: '协议查看',
+               path: 'SignExamine',
+               component: dynamicWrapper(app,[], () => import('../routes/Net/MyNet/SignExamine')),
+           },
+           {
+               name: '协议查询',
+               path: 'DealQuery',
+               component: dynamicWrapper(app, [], () => import('../routes/Net/DealQuery')),
+           },
+           {
+               name: '协议模板',
+               path: 'DealStencil',
+               component: dynamicWrapper(app, [], () => import('../routes/Net/DealStencil')),
+           },
+           {
+               name: '签署管理',
+               path: 'SignAdmin',
+               component: dynamicWrapper(app, [], () => import('../routes/Net/SignAdmin')),
+           },
+        ]
+      }
     ],
   },
 ];
